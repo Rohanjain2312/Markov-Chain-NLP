@@ -1,50 +1,42 @@
-# Markov Text Generator 
+# Markov Text Generator
 
-**A fast, scalable Markov Chain text generator with dynamic N-gram modeling and parallelized NLP preprocessing.**
-
----
-
-##  Overview
-
-This project implements a **Markov Chain-based language model** to generate coherent, context-sensitive text.  
-It demonstrates key concepts in **Natural Language Processing (NLP)** and **probabilistic modeling**:
-
-- Parallelized loading and cleaning of large text corpora
-- Intelligent tokenization preserving sentence boundaries (`.`)
-- Dynamic construction of **Unigram, Bigram, and Trigram** chains
-- **Weighted next-word prediction** based on real transition probabilities
-- Side-by-side comparison of **different N-gram models** to understand how context size impacts text generation
+Dynamic N-gram Markov Chain text generator with efficient parallelized NLP preprocessing.
 
 ---
 
-##  What is a Markov Chain (Simple Explanation)
+## Overview
 
-A **Markov Chain** is a model that predicts **what comes next** based only on the **current state**, **not the full history**.
+This project demonstrates core concepts in Natural Language Processing (NLP) and probabilistic modeling:
 
-> In simple terms:  
-> If you know where you are **now**, that's enough to guess what happens **next** — you don't need to remember how you got here.
-
-In language modeling:
-- A **Unigram model** picks the next word based only on the current word.
-- A **Bigram model** picks the next word based on the last two words.
-- A **Trigram model** uses the last three words for even richer predictions.
-
-The more context you use (bigrams, trigrams), the more **coherent and realistic** your generated text becomes.
-
-This project demonstrates these ideas practically by building **weighted Markov Chains** — meaning the next word is chosen based on how often it realistically follows, not randomly.
+- Parallelized reading and cleaning of multiple text files
+- Tokenization preserving sentence boundaries
+- Dynamic Unigram, Bigram, Trigram model construction
+- Weighted word prediction based on real transition probabilities
+- Side-by-side comparison of different N-gram models
 
 ---
 
-##  Project Structure
+## What is a Markov Chain?
 
-```bash
+A Markov Chain predicts the next step based only on the current state, not the full history.
+
+In text modeling:
+- Unigram looks at 1 word.
+- Bigram uses 2 words.
+- Trigram uses 3 words.
+
+Using more context improves the coherence of generated text.
+This project uses weighted chains to reflect real-world transition probabilities.
+
+---
+
+## Project Structure
+
+```
 markov-text-generator/
-├── src/
-│   └── markov_text_generator.py        # Core codebase
-├── data/
-│   └── sample_texts.txt                 # (Training files)
-├── examples/
-│   └── output_samples.md                # Generated examples
+├── src/          # Code
+├── data/         # Input texts
+├── examples/     # Sample outputs
 ├── .gitignore
 ├── requirements.txt
 ├── LICENSE
@@ -53,7 +45,7 @@ markov-text-generator/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ```bash
 git clone https://github.com/yourusername/markov-text-generator.git
@@ -63,56 +55,62 @@ cd src
 python markov_text_generator.py
 ```
 
-- By default, the script reads all `.txt` files in `data/`
-- Generates Unigram, Bigram, and Trigram outputs
-- Compares the different outputs starting from the same initial word
-
 ---
 
 ## Sample Output
 
-> **Starting word:** "the"
+Starting word: "the"
 
-- **Unigram Model:**  
-  _"the forest was deep and the sun rose above the old hills where the hobbits rested before..."_
+- Unigram:  
+  "the forest was deep and the sun rose above the old hills..."
 
-- **Bigram Model:**  
-  _"the forest was silent as the sun rose over the eastern hills and the travelers rested before continuing..."_
+- Bigram:  
+  "the forest was silent as the sun rose over the eastern hills..."
 
-- **Trigram Model:**  
-  _"the forest was silent as dawn broke over the misty hills and the travelers prepared for their long journey..."_
+- Trigram:  
+  "the forest was silent as dawn broke over the misty hills..."
 
-(Notice how coherence improves from Unigram ➔ Bigram ➔ Trigram.)
-
----
-
-##  Skills Demonstrated
-
-- **Natural Language Processing**: Cleaning, tokenization, context-aware generation
-- **Markov Chain Modeling**: Understanding state transitions and memoryless processes
-- **Weighted Sampling**: Realistic prediction based on transition frequencies
-- **Parallel Programming**: Fast text ingestion using `concurrent.futures`
-- **Python Engineering**: Clean, modular, efficient code design
+Notice how text becomes more natural from unigram to trigram.
 
 ---
 
-##  Future Enhancements
+## Skills Demonstrated
 
-- Implement **character-level Markov Chains** for style mimicry
-- Add **temperature control** for tuning randomness in text generation
-- Build a **Streamlit UI** to interactively generate text
-- Save/load trained Markov models for faster runtime
+- Text preprocessing and tokenization
+- Markov Chain modeling
+- Weighted sampling
+- Parallel file processing
+- Clean modular Python coding
+
+---
+
+## Future Enhancements
+
+- Character-level Markov generation
+- Temperature control for creative text
+- Save/load trained models
+- Interactive Streamlit app
 
 ---
 
-##  Learning Outcomes
+## Learning Outcomes
 
-Building this project deepened my understanding of both **NLP fundamentals** and **probabilistic modeling**:
+Through this project, I:
 
-- I developed a strong intuition for how **Markov Chains** model sequential decision-making, especially how memory length (N-grams) affects the quality of generated text.
-- I learned how to **tokenize real-world text corpora** carefully, preserving sentence boundaries and handling encoding inconsistencies across different file types.
-- I understood the value of **weighted sampling** in probabilistic models to produce more **natural-sounding** and **realistic** outputs rather than purely random sequences.
-- I practiced writing **modular, scalable Python code**, including **parallelized file processing** to handle larger datasets efficiently.
-- This project also helped me appreciate the **tradeoffs between model complexity and output quality**, especially when experimenting with Unigram vs Bigram vs Trigram models.
+- Gained intuition about Markov Chains and N-gram context.
+- Practiced weighted sampling for realistic text generation.
+- Learned parallel processing for faster data handling.
+- Designed scalable, modular code for NLP tasks.
 
 ---
+
+## License
+
+Licensed under the MIT License.
+
+---
+
+## Connect
+
+[Connect with me on LinkedIn](https://www.linkedin.com/in/jaroh23/)  
+or [View more projects](https://github.com/Rohanjain2312)

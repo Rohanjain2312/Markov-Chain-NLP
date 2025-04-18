@@ -1,10 +1,10 @@
-# Markov Text Generator 📜
+# Markov Text Generator 
 
 **A fast, scalable Markov Chain text generator with dynamic N-gram modeling and parallelized NLP preprocessing.**
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 This project implements a **Markov Chain-based language model** to generate coherent, context-sensitive text.  
 It demonstrates key concepts in **Natural Language Processing (NLP)** and **probabilistic modeling**:
@@ -17,7 +17,7 @@ It demonstrates key concepts in **Natural Language Processing (NLP)** and **prob
 
 ---
 
-## 📚 What is a Markov Chain (Simple Explanation)
+##  What is a Markov Chain (Simple Explanation)
 
 A **Markov Chain** is a model that predicts **what comes next** based only on the **current state**, **not the full history**.
 
@@ -35,7 +35,7 @@ This project demonstrates these ideas practically by building **weighted Markov 
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash
 markov-text-generator/
